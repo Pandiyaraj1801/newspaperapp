@@ -10,18 +10,13 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const today = new Date();
-    today.setDate(today.getDate() - 1);
-
-    const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2, "0");
-    const previousDate = `${year}-${month}-${day}`;
-
     axios
-      .get(
-        `https://newsapi.org/v2/everything?q=tesla&from=${previousDate}&sortBy=publishedAt&apiKey=5b21cfd79046481e91f216d22d686c33`
-      )
+      .get("https://newspaper-api-56kk.onrender.com/getUserdata", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => {
         if (res.status === 200) {
           setNewsData(res.data.articles);
