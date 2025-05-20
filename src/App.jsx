@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import AppBar from "./appbar/AppBar.jsx";
 import ErrorScreen from "./error/errror.jsx";
 import LoaderImg from "./loader/Loader.jsx";
-import "./app.css";
+import "./css/app.css";
 
 function App() {
   const [newsData, setNewsData] = useState([]);
