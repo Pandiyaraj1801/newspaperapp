@@ -1,9 +1,9 @@
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import AppBar from "./appbar/AppBar.jsx";
 import ErrorScreen from "./error/errror.jsx";
 import LoaderImg from "./loader/Loader.jsx";
-import "../src/app.css";
+import "./app.css";
 
 function App() {
   const [newsData, setNewsData] = useState([]);
